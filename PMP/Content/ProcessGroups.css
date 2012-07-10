@@ -1,0 +1,31 @@
+﻿#knowledge-area 
+{
+    float: left;
+    border: 1px solid black;
+    width: 196px;
+    height: 300px;
+}
+
+#main-scroller
+{
+    float: left;
+    border: 1px solid black;
+    width: 700px;
+    height: 300px;
+}
+
+#process-action
+{
+    float: left;
+    border: 1px solid black;
+    width: 448px;
+    height: 300px;
+}
+
+#process-deliverable
+{
+    float: left;
+    border: 1px solid black;
+    width: 448px;
+    height: 300px;
+}

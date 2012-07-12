@@ -1,11 +1,56 @@
 ﻿<link href="@Url.Content("~/Content/ProcessGroups.css")" rel="stylesheet" type="text/css" />
-
+<script src="@Url.Content("~/Scripts/jquery.jcoverflip.js")" type="text/javascript"></script>
+<script src="../../Scripts/jquery.featureCarousel.js" type="text/javascript"></script>
+<link href="../../Content/feature-carousel.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Process Groups";
 }
 <div id="knowledge-area">
 </div>
 <div id="main-scroller">
+    <div class="carousel-container">
+    
+      <div id="carousel">
+        <div class="carousel-feature">
+          <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/1.jpg"></a>
+          <div class="carousel-caption">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-feature">
+          <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/2.jpg"></a>
+          <div class="carousel-caption">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-feature">
+          <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/3.jpg"></a>
+          <div class="carousel-caption">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-feature">
+          <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/4.jpg"></a>
+        </div>
+        <div class="carousel-feature">
+          <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/5.jpg"></a>
+          <div class="carousel-caption">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <div id="carousel-left"><img src="../../Content/img/arrow-left.png" /></div>
+      <div id="carousel-right"><img src="../../Content/img/arrow-right.png" /></div>
+    </div>
 </div>
 <div class="clear"></div>
 <div id="process-action">
@@ -13,3 +58,29 @@
 <div id="process-deliverable">
 </div>
 <div class="clear"></div>
+  
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var carousel = $("#carousel").featureCarousel({
+                // include options like this:
+                // (use quotes only for string values, and no trailing comma after last option)
+                // option: value,
+                // option: value
+            });
+
+            $("#but_prev").click(function () {
+                carousel.prev();
+            });
+            $("#but_pause").click(function () {
+                carousel.pause();
+            });
+            $("#but_start").click(function () {
+                carousel.start();
+            });
+            $("#but_next").click(function () {
+                carousel.next();
+            });
+        });
+    </script>

@@ -1,7 +1,0 @@
-c:\users\shahryar\documents\visual studio 2010\Projects\PMP\PMP\bin\PMP.dll
-c:\users\shahryar\documents\visual studio 2010\Projects\PMP\PMP\bin\PMP.pdb
-c:\users\shahryar\documents\visual studio 2010\Projects\PMP\PMP\bin\EntityFramework.dll
-c:\users\shahryar\documents\visual studio 2010\Projects\PMP\PMP\bin\EntityFramework.xml
-c:\users\shahryar\documents\visual studio 2010\Projects\PMP\PMP\obj\Debug\ResolveAssemblyReference.cache
-c:\users\shahryar\documents\visual studio 2010\Projects\PMP\PMP\obj\Debug\PMP.dll
-c:\users\shahryar\documents\visual studio 2010\Projects\PMP\PMP\obj\Debug\PMP.pdb

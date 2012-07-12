@@ -29,3 +29,63 @@
     width: 448px;
     height: 300px;
 }
+
+.process-header-left
+{
+    background-color: green;
+    width: 50%;
+    float: left;
+}
+
+.process-header-right
+{
+    background-color: green;
+    width: 50%;
+    float: right;
+}
+
+.process-header
+{
+    width: 100%;
+    color: yellow;
+    text-indent: 10px;
+    background-color: blue;
+}
+
+#process-action li
+{
+    border: 1px solid blue;
+    margin-left: -20px;
+    list-style: none;
+}
+
+#process-action li ol
+{
+    margin-top: -22px;
+}
+
+#process-action li ol li
+{
+    border: 1px solid red;
+    list-style-type: decimal; 
+    margin-left: 50%;
+}
+
+#process-deliverable li
+{
+    border: 1px solid blue;
+    margin-left: -20px;
+    list-style: none;
+}
+
+#process-deliverable li ol
+{
+    margin-top: -22px;
+}
+
+#process-deliverable li ol li
+{
+    border: 1px solid red;
+    list-style-type: decimal; 
+    margin-left: 50%;
+}

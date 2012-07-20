@@ -9,6 +9,7 @@
   height:280px;
   width:700px;
   background-color:#CCC;
+  background-image: url('/Content/img/greystripe.gif');
   position:relative;
   margin-bottom:0.5em;
   font-size:12px;
@@ -45,7 +46,8 @@
   top:5px;
   padding:3px;
   margin:3px;
-  background-color:#000;
+  /*background-color:#000;*/
+  background-color: transparent;
 }
 .tracker-individual-container {
   position:absolute;
@@ -63,7 +65,8 @@
   padding:0 3px;
   color:white;
   text-align:center;
-  background-color:#DDD;
+  /*background-color:#272727;*/
+  background-color: transparent;
 }
 .tracker-individual-container .tracker-individual-blip-selected {
   color:white;

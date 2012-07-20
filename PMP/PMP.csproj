@@ -75,6 +75,7 @@
     <Content Include="Content\feature-carousel.css" />
     <Content Include="Content\img\arrow-left.png" />
     <Content Include="Content\img\arrow-right.png" />
+    <Content Include="Content\img\greystripe.gif" />
     <Content Include="Content\img\sample1.jpg" />
     <Content Include="Content\img\sample2.jpg" />
     <Content Include="Content\img\sample3.jpg" />

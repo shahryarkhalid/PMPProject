@@ -89,17 +89,20 @@
     margin-left: -20px;
     list-style: none;
     line-height: 2em;
+    font-weight: 700;
 }
 
 #process-action li ol
 {
     margin-top: -22px;
+    font-weight: normal;
 }
 
 #process-action li ol li
 {
     list-style-type: decimal; 
     margin-left: 50%;
+    font-weight: inherit;
 }
 
 #process-deliverable li
@@ -107,17 +110,20 @@
     margin-left: -20px;
     list-style: none;
     line-height: 2em;
+    font-weight: 700;
 }
 
 #process-deliverable li ol
 {
     margin-top: -22px;
+    font-weight: normal;
 }
 
 #process-deliverable li ol li
 {
     list-style-type: decimal; 
     margin-left: 50%;
+    font-weight: inherit;
 }
 
 .process-content

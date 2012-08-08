@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ProcessGroups>
+  <ProcessGroup name="Initiating">
+    <KnowledgeArea>Integration</KnowledgeArea>
+    <KnowledgeArea>Communications</KnowledgeArea>
+    <ProcessInput>
+      <InputName>Develop project charter</InputName>
+      <SubInput>Project statement of work</SubInput>
+      <SubInput>Bubsiness case</SubInput>
+      <SubInput>Contract</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Project Charter</OutputName>
+        <SubOutput>Project Charter</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Identify Stakeholders</InputName>
+      <SubInput>Project charter</SubInput>
+      <SubInput>Procurement documents</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Stakeholders</OutputName>
+        <SubOutput>Stakeholder register</SubOutput>
+        <SubOutput>Stakeholder management strategy</SubOutput>
+      </Output>
+    </ProcessInput>
+  </ProcessGroup>
+  <ProcessGroup name="Planning">
+    <KnowledgeArea>Integration</KnowledgeArea>
+    <KnowledgeArea>Scope</KnowledgeArea>
+    <KnowledgeArea>Time</KnowledgeArea>
+    <KnowledgeArea>Cost</KnowledgeArea>
+    <KnowledgeArea>Quality</KnowledgeArea>
+    <KnowledgeArea>Human Resource</KnowledgeArea>
+    <KnowledgeArea>Communications</KnowledgeArea>
+    <KnowledgeArea>Risk</KnowledgeArea>
+    <KnowledgeArea>Procurement</KnowledgeArea>
+    <ProcessInput>
+      <InputName>Develop Project Management Plan</InputName>
+      <SubInput>Project Charter</SubInput>
+      <SubInput>Outputs from planning process</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Project Management Plan</OutputName>
+        <SubOutput>Project Management Plan</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Collect Requirements</InputName>
+      <SubInput>Project Charter</SubInput>
+      <SubInput>Stakeholder register</SubInput>
+      <Output>
+        <OutputName>Requirements</OutputName>
+        <SubOutput>Requirements documentation</SubOutput>
+        <SubOutput>Requirements management plan</SubOutput>
+        <SubOutput>Requirements tracebility matrix</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Define Scope</InputName>
+      <SubInput>Project Charter</SubInput>
+      <SubInput>Requirements documentation</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Scope</OutputName>
+        <SubOutput>Project scope statement</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Create WBS</InputName>
+      <SubInput>Project scope statement</SubInput>
+      <SubInput>Requirements documentation</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>WBS</OutputName>
+        <SubOutput>WBS</SubOutput>
+        <SubOutput>WBS dictionary</SubOutput>
+        <SubOutput>Scope baseline</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Define Activities</InputName>
+      <SubInput>Scope baseline</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Activities</OutputName>
+        <SubOutput>Activity list</SubOutput>
+        <SubOutput>Activity attributes</SubOutput>
+        <SubOutput>Milestone list</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Sequence Activities</InputName>
+      <SubInput>Activity list</SubInput>
+      <SubInput>Activity attributes</SubInput>
+      <SubInput>Milestone list</SubInput>
+      <SubInput>Project scope statement</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Activities Sequenced</OutputName>
+        <SubOutput>Project schedule network diagrams</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Estimate Activity Resources</InputName>
+      <SubInput>Activity list</SubInput>
+      <SubInput>Activity attributes</SubInput>
+      <SubInput>Resource calendars</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Activity Resource Estimates</OutputName>
+        <SubOutput>Activity resource requirements</SubOutput>
+        <SubOutput>Resource breakdown structure</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Estimate Activity Durations</InputName>
+      <SubInput>Activity list</SubInput>
+      <SubInput>Activity attributes</SubInput>
+      <SubInput>Activity resource requirements</SubInput>
+      <SubInput>Resource calendars</SubInput>
+      <SubInput>Project scope statement</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Activity Duration Estimates</OutputName>
+        <SubOutput>Activity duration estimates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Develop Schedule</InputName>
+      <SubInput>Activity list</SubInput>
+      <SubInput>Activity attributes</SubInput>
+      <SubInput>Project schedule network diagrams</SubInput>
+      <SubInput>Activity resource requirements</SubInput>
+      <SubInput>Resource calendars</SubInput>
+      <SubInput>Activity duration estimates</SubInput>
+      <SubInput>Project scope statement</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Project Schedule</OutputName>
+        <SubOutput>Project schedule</SubOutput>
+        <SubOutput>Schedule baseleine</SubOutput>
+        <SubOutput>Schedule data</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Estimate Costs</InputName>
+      <SubInput>Scope baseline</SubInput>
+      <SubInput>Project schedule</SubInput>
+      <SubInput>Human resource plan</SubInput>
+      <SubInput>Risk register</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Cost Estimate</OutputName>
+        <SubOutput>Activity cost estimates</SubOutput>
+        <SubOutput>Basis of estimates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Determine Budget</InputName>
+      <SubInput>Activity cost estimates</SubInput>
+      <SubInput>basis of estimates</SubInput>
+      <SubInput>scope baseline</SubInput>
+      <SubInput>Project schedule</SubInput>
+      <SubInput>Resource calendars</SubInput>
+      <SubInput>Contracts</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Budget</OutputName>
+        <SubOutput>Cost performance baseline</SubOutput>
+        <SubOutput>Project funding requirements</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Plan Quality</InputName>
+      <SubInput>Scope baseline</SubInput>
+      <SubInput>Stakeholder register</SubInput>
+      <SubInput>Cost performance baseline</SubInput>
+      <SubInput>Schedule baseline</SubInput>
+      <SubInput>Risk register</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Quality Plan</OutputName>
+        <SubOutput>Quality management plan</SubOutput>
+        <SubOutput>Quality metrics</SubOutput>
+        <SubOutput>Quality checklists</SubOutput>
+        <SubOutput>Projcess improvement plan</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Develop Human Recource Plan</InputName>
+      <SubInput>Activity resource requirements</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Human Resource Plan</OutputName>
+        <SubOutput>Human resource plan</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Plan Communications</InputName>
+      <SubInput>Stakeholder register</SubInput>
+      <SubInput>Stakeholder management strategy</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Communications Plan</OutputName>
+        <SubOutput>Communications management plan</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Plan Risk Management</InputName>
+      <SubInput>Project scope statement</SubInput>
+      <SubInput>Cost management plan</SubInput>
+      <SubInput>Schedule management plan</SubInput>
+      <SubInput>Communications management plan</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Risk Management Plan</OutputName>
+        <SubOutput>Risk management plan</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Identify Risks</InputName>
+      <SubInput>Risk management plan</SubInput>
+      <SubInput>Activity cost estimates</SubInput>
+      <SubInput>Activity duration estimates</SubInput>
+      <SubInput>Scope baseline</SubInput>
+      <SubInput>Stakeholder register</SubInput>
+      <SubInput>Cost management plan</SubInput>
+      <SubInput>Schedule management plan</SubInput>
+      <SubInput>Quality management plan</SubInput>
+      <SubInput>Project documents</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Risks</OutputName>
+        <SubOutput>Risk register</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Perform Qualitative Risk Analysis</InputName>
+      <SubInput>Risk register</SubInput>
+      <SubInput>Risk management plan</SubInput>
+      <SubInput>Project scope statement</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Qualitative Risk Analysis</OutputName>
+        <SubOutput>Risk register updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Perform Quantitative Risk Analysis</InputName>
+      <SubInput>Risk register</SubInput>
+      <SubInput>Risk management plan</SubInput>
+      <SubInput>Cost management plan</SubInput>
+      <SubInput>Schedule management plan</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Quantitative Risk Analysis</OutputName>
+        <SubOutput>Risk register updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Plan Risk Responses</InputName>
+      <SubInput>Risk register</SubInput>
+      <SubInput>Risk management plan</SubInput>
+      <Output>
+        <OutputName>Risk Responses</OutputName>
+        <SubOutput>Risk register updates</SubOutput>
+        <SubOutput>Risk-related contract decisions</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Plan Procurements</InputName>
+      <SubInput>Scope baseline</SubInput>
+      <SubInput>Requirements documentation</SubInput>
+      <SubInput>Teaming agreements</SubInput>
+      <SubInput>Risk register</SubInput>
+      <SubInput>Risk-related contract decisions</SubInput>
+      <SubInput>Activity resource requirements</SubInput>
+      <SubInput>Project schedule</SubInput>
+      <SubInput>Activity cost estimates</SubInput>
+      <SubInput>Cost performance baseline</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Risk Analysis</OutputName>
+        <SubOutput>Risk register updates</SubOutput>
+      </Output>
+    </ProcessInput>
+  </ProcessGroup>
+  <ProcessGroup name="Executing">
+    <KnowledgeArea>Integration</KnowledgeArea>
+    <KnowledgeArea>Quality</KnowledgeArea>
+    <KnowledgeArea>Human Resource</KnowledgeArea>
+    <KnowledgeArea>Communications</KnowledgeArea>
+    <KnowledgeArea>Procurement</KnowledgeArea>
+    <ProcessInput>
+      <InputName>Direct and Manage Project Execution</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Approved change requests</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Project Execution</OutputName>
+        <SubOutput>Deliverables</SubOutput>
+        <SubOutput>Work performance information</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Perform Quality Assurance</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Quality metrics</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <SubInput>Quality control measurements</SubInput>
+      <Output>
+        <OutputName>Quality Assurance</OutputName>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Acquire Project Team</InputName>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Project Team Acquired</OutputName>
+        <SubOutput>Project staff assignments</SubOutput>
+        <SubOutput>Resource calendars</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Develop Project Team</InputName>
+      <SubInput>Project staff assignments</SubInput>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Resource calendars</SubInput>
+      <Output>
+        <OutputName>Project Team Development</OutputName>
+        <SubOutput>Team performance assessments</SubOutput>
+        <SubOutput>Enterprise environmental factors updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Manage Project Team</InputName>
+      <SubInput>Prokect staff assignments</SubInput>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Team performance assessments</SubInput>
+      <SubInput>Performance reports</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Project Team Management</OutputName>
+        <SubOutput>Enterprise environmental factors updates</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Distribute Information</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Performance reports</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Information Distribution</OutputName>
+        <SubOutput>Organizational process assets updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Manage Stakeholder Expectations</InputName>
+      <SubInput>Stakeholder register</SubInput>
+      <SubInput>Stakeholder maangement strategy</SubInput>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Issue log</SubInput>
+      <SubInput>Change log</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Stakeholder Expectations</OutputName>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Conduct Procurements</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Procurement documents</SubInput>
+      <SubInput>Source selection criteria</SubInput>
+      <SubInput>Qualified seller list</SubInput>
+      <SubInput>Seller proposals</SubInput>
+      <SubInput>Project documents</SubInput>
+      <SubInput>Make-or-buy decisions</SubInput>
+      <SubInput>Teaming agreements</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Procurements</OutputName>
+        <SubOutput>Selected sellers</SubOutput>
+        <SubOutput>Procurement contract award</SubOutput>
+        <SubOutput>Resource calendars</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+  </ProcessGroup>
+  <ProcessGroup name="Monitoring and Controlling">
+    <KnowledgeArea>Integration</KnowledgeArea>
+    <KnowledgeArea>Scope</KnowledgeArea>
+    <KnowledgeArea>Time</KnowledgeArea>
+    <KnowledgeArea>Cost</KnowledgeArea>
+    <KnowledgeArea>Quality</KnowledgeArea>
+    <KnowledgeArea>Communications</KnowledgeArea>
+    <KnowledgeArea>Risk</KnowledgeArea>
+    <KnowledgeArea>Procurement</KnowledgeArea>
+    <ProcessInput>
+      <InputName>Monitor and Control Project Work</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Performance reports</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Project Monitoring and Control</OutputName>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Perform Integrated Change Control</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <SubInput>Change requests</SubInput>
+      <SubInput>Enterprise environmental factors</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Change Control</OutputName>
+        <SubOutput>Change requests status updates</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Verify Scope</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Requirements</SubInput>
+      <SubInput>Requirements traceability matrix</SubInput>
+      <SubInput>Validated deliverables</SubInput>
+      <Output>
+        <OutputName>Scope Verification</OutputName>
+        <SubOutput>Accepted deliverables</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Control Scope</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <SubInput>Requirements documentation</SubInput>
+      <SubInput>Requirements traceability matrix</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Scope Control</OutputName>
+        <SubOutput>Work performance measurements</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Control Schedule</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Project schedule</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Schedule Control</OutputName>
+        <SubOutput>Work performance measurements</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Control Cost</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Project funding requirements</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Cost Control</OutputName>
+        <SubOutput>Work performance measurements</SubOutput>
+        <SubOutput>Budget forecasts</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Perform Quality Control</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Quality metrics</SubInput>
+      <SubInput>Quality checklists</SubInput>
+      <SubInput>Work performance measurements</SubInput>
+      <SubInput>Approved change requests</SubInput>
+      <SubInput>Deliverables</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Quality Control</OutputName>
+        <SubOutput>Quality control measurements</SubOutput>
+        <SubOutput>Validated changes</SubOutput>
+        <SubOutput>Validated deliverables</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Report Performance</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <SubInput>Work performance measurements</SubInput>
+      <SubInput>Budget forecasts</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Performance Report</OutputName>
+        <SubOutput>Performance reports</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Monitor and Control Risks</InputName>
+      <SubInput>Risk registern</SubInput>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <SubInput>Performance reports</SubInput>
+      <Output>
+        <OutputName>Risk Control</OutputName>
+        <SubOutput>Risk register updates</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+        <SubOutput>Project document updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Administer Procurements</InputName>
+      <SubInput>Procurement documents</SubInput>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Contract</SubInput>
+      <SubInput>Performance reports</SubInput>
+      <SubInput>Approved change requests</SubInput>
+      <SubInput>Work performance information</SubInput>
+      <Output>
+        <OutputName>Procurement Administration</OutputName>
+        <SubOutput>Procurement documentation</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+        <SubOutput>Change requests</SubOutput>
+        <SubOutput>Project management plan updates</SubOutput>
+      </Output>
+    </ProcessInput>
+  </ProcessGroup>
+  <ProcessGroup name="Closing">
+    <KnowledgeArea>Integration</KnowledgeArea>
+    <KnowledgeArea>Procurement</KnowledgeArea>
+    <ProcessInput>
+      <InputName>Close Project or Phase</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Accepted deliverables</SubInput>
+      <SubInput>Organizational process assets</SubInput>
+      <Output>
+        <OutputName>Closed Project or Phase</OutputName>
+        <SubOutput>Final product, service, or result transition</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+      </Output>
+    </ProcessInput>
+    <ProcessInput>
+      <InputName>Close Procurements</InputName>
+      <SubInput>Project management plan</SubInput>
+      <SubInput>Procurement documents</SubInput>
+      <Output>
+        <OutputName>Procurements Closed</OutputName>
+        <SubOutput>Closed procurements</SubOutput>
+        <SubOutput>Organizational process assets updates</SubOutput>
+      </Output>
+    </ProcessInput>
+  </ProcessGroup>
+</ProcessGroups>

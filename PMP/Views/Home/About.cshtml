@@ -1,8 +1,42 @@
 ﻿@{
-    ViewBag.Title = "About Us";
+    ViewBag.Title = "Help";
+    ViewBag.OnLoad = "sendXMLRequest()";
 }
+@section HeaderJS{
+   <script type="text/javascript">
+       function sendXMLRequest() {
+           $(document).ready(function () {
+               $.ajax({
+                   type: "GET",
+                   url: "/Content/ProcessGroups.xml",
+                   dataType: "xml",
+                   success: handleResponse
+               });
+           });
+       }
 
-<h2>About</h2>
+       function handleResponse(xml) {
+           // Get tour name    
+          // $("#tour-name").html($(xml).find("ProcessGroups").attr("title"));
+           // find each stop           
+           $(xml).find("ProcessGroup").each(function () {
+               $("#stops").append("<h2>" + $(this).attr("name") + "</h2>");
+               $(this).find("ProcessInput").each(function () {
+                   $("#stops").append($(this).find("InputName").text() + "<br />");
+                   $(this).find("SubInput").each(function () {
+                       $("#stops").append($(this).text() + "<br />");
+                   });
+               });
+           });
+       }	
+</script>
+}
+<h2>Help</h2>
 <p>
-     Put content here.
+    Help content goes here.
 </p>
+<h1 id="tour-name"></h1>
+
+<div id="stops">
+	
+</div>

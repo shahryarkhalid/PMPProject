@@ -17,26 +17,29 @@
 
        function handleResponse(xml) {
            // Get tour name    
-          // $("#tour-name").html($(xml).find("ProcessGroups").attr("title"));
-           // find each stop           
+           // $("#tour-name").html($(xml).find("ProcessGroups").attr("title"));
+           // find each stop
+
            $(xml).find("ProcessGroup").each(function () {
                $("#stops").append("<h2>" + $(this).attr("name") + "</h2>");
-               $(this).find("ProcessInput").each(function () {
-                   $("#stops").append($(this).find("InputName").text() + "<br />");
-                   $(this).find("SubInput").each(function () {
-                       $("#stops").append($(this).text() + "<br />");
-                   });
+
+               $(this).find("ProcessHelp").each(function () {
+                   $("#stops").append("<h3>" + $(this).text() + "</h3>");
                });
+
+               /*
+               $(this).find("ProcessInput").each(function () {
+                    $("#stops").append($(this).find("InputName").text() + "<br />");
+                    $(this).find("SubInput").each(function () {
+                        $("#stops").append($(this).text() + "<br />");
+                    });
+               });
+               */
            });
        }	
 </script>
 }
-<h2>Help</h2>
-<p>
-    Help content goes here.
-</p>
-<h1 id="tour-name"></h1>
+<h1>Help</h1>
 
-<div id="stops">
-	
-</div>
+<h1 id="tour-name"></h1>
+<div id="stops"></div>

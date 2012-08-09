@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ProcessGroups>
   <ProcessGroup name="Initiating">
+    <ProcessHelp>What is initiating?</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Communications</KnowledgeArea>
     <ProcessInput>
@@ -29,6 +30,7 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Planning">
+    <ProcessHelp>What is planning?</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Scope</KnowledgeArea>
     <KnowledgeArea>Time</KnowledgeArea>
@@ -314,6 +316,7 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Executing">
+    <ProcessHelp>What is executing?</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Quality</KnowledgeArea>
     <KnowledgeArea>Human Resource</KnowledgeArea>
@@ -434,6 +437,7 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Monitoring and Controlling">
+    <ProcessHelp>What is monitoring and controlling?</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Scope</KnowledgeArea>
     <KnowledgeArea>Time</KnowledgeArea>
@@ -596,6 +600,7 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Closing">
+    <ProcessHelp>What is closing?</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Procurement</KnowledgeArea>
     <ProcessInput>

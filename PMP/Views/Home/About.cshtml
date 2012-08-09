@@ -18,9 +18,17 @@
        function handleResponse(xml) {
            // Get tour name    
           // $("#tour-name").html($(xml).find("ProcessGroups").attr("title"));
-           // find each stop           
+           // find each stop
            $(xml).find("ProcessGroup").each(function () {
                $("#stops").append("<h2>" + $(this).attr("name") + "</h2>");
+
+               $("#stops").append($(this).find("ProcessGroupHelp").text());
+               $("#stops").append($(this).find("ProcessGroupHelp").val());
+
+               $(this).find("ProcessGroupHelp").each(function () {
+                   $("#stops").append("<br /> hello <br /><br />");
+               });
+
                $(this).find("ProcessInput").each(function () {
                    $("#stops").append($(this).find("InputName").text() + "<br />");
                    $(this).find("SubInput").each(function () {
@@ -33,10 +41,8 @@
 }
 <h2>Help</h2>
 <p>
-    Help content goes here.
+    Below is a list of help topics and what each section represents.
 </p>
-<h1 id="tour-name"></h1>
 
-<div id="stops">
-	
-</div>
+<h1 id="tour-name"></h1>
+<div id="stops"></div>

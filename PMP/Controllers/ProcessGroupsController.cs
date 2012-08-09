@@ -14,15 +14,10 @@ namespace PMP.Controllers
 
         public ActionResult Index()
         {
-            //string xmlFile = @"\Content\ProcessGroups.xml";
-
-            //XDocument doc = XDocument.Load(xmlFile);
-            //XElement testCfg = XElement.Load(xmlFile);
-            //IEnumerable<XElement> test = doc.Elements();
-
-            //XElement child = testCfg.Element("DownloadedEmailIdList");
-
-            //IEnumerable<XElement> emailsList = child.Elements("i");
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 

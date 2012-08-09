@@ -17,6 +17,10 @@ namespace PMP.Controllers
 
         public ActionResult About()
         {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
     }

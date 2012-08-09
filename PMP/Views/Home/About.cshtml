@@ -22,10 +22,9 @@
            $(xml).find("ProcessGroup").each(function () {
                $("#stops").append("<h2>" + $(this).attr("name") + "</h2>");
 
-               $("#stops").append($(this).find("ProcessGroupHelp").text());
-               $("#stops").append($(this).find("ProcessGroupHelp").val());
+               $("#stops").append($(this).find("ProcessHelp").text());
 
-               $(this).find("ProcessGroupHelp").each(function () {
+               $(this).find("ProcessHelp").each(function () {
                    $("#stops").append("<br /> hello <br /><br />");
                });
 

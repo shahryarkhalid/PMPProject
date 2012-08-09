@@ -56,11 +56,13 @@ h1 {
 }
 
 h2 {
-    padding: 0 0 10px 0;
+    padding: 0;
 }
 
 h3 {
     font-size: 1.2em;
+    margin-left: 20px;
+    color: #676767;
 }
 
 h4 {

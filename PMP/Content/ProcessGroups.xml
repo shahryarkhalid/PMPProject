@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ProcessGroups>
   <ProcessGroup name="Initiating">
-    <ProcessHelp>What is initiating?</ProcessHelp>
+    <ProcessHelp>Initiating a project includes recognizing and starting a new project or project phase</ProcessHelp>
+    <ProcessHelp>The main goal is to formally select and start off projects</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Communications</KnowledgeArea>
     <ProcessInput>
@@ -30,7 +31,7 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Planning">
-    <ProcessHelp>What is planning?</ProcessHelp>
+    <ProcessHelp>The main purpose of project planning is to guide execution</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Scope</KnowledgeArea>
     <KnowledgeArea>Time</KnowledgeArea>
@@ -316,7 +317,8 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Executing">
-    <ProcessHelp>What is executing?</ProcessHelp>
+    <ProcessHelp>Usually takes the most time and resources to perform project execution</ProcessHelp>
+    <ProcessHelp>Project managers must use their leadership skills to handle the many challenges that occur during project execution</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Quality</KnowledgeArea>
     <KnowledgeArea>Human Resource</KnowledgeArea>
@@ -437,7 +439,9 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Monitoring and Controlling">
-    <ProcessHelp>What is monitoring and controlling?</ProcessHelp>
+    <ProcessHelp>Involves measuring progress toward project objectives, monitoring deviation from the plan, and taking correction actions</ProcessHelp>
+    <ProcessHelp>Affects all other process groups and occurs during all phases of the project life cycle</ProcessHelp>
+    <ProcessHelp>Outputs include performance reports, change requests, and updates to various plans</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Scope</KnowledgeArea>
     <KnowledgeArea>Time</KnowledgeArea>
@@ -600,7 +604,10 @@
     </ProcessInput>
   </ProcessGroup>
   <ProcessGroup name="Closing">
-    <ProcessHelp>What is closing?</ProcessHelp>
+    <ProcessHelp>Involves gaining stakeholder and customer acceptance of the final products and services</ProcessHelp>
+    <ProcessHelp>Even if projects are not completed, they should be closed out to learn from the past</ProcessHelp>
+    <ProcessHelp>Outputs include project archives and lessons learned, part of organizational process assets</ProcessHelp>
+    <ProcessHelp>Most projects also include a final report and presentation to the sponsor/senior management</ProcessHelp>
     <KnowledgeArea>Integration</KnowledgeArea>
     <KnowledgeArea>Procurement</KnowledgeArea>
     <ProcessInput>

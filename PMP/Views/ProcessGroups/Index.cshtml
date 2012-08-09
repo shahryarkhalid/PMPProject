@@ -87,16 +87,16 @@
            $(xml).find("ProcessGroup[name='" + displayedGroup + "']").each(function () {
                listCount = 0;
                $(this).find("ProcessInput").each(function () {
-                   outerList.append("<li id=\"input-item-" + listCount + "\">" + $(this).find("InputName").text() + "</li>");
+                   outerList.append("<li id=\"input-item-" + listCount + "\"><ul><li>" + $(this).find("InputName").text() + "</li></ul></li>");
                    innerList = $("#input-item-" + listCount).append('<ol></ol>').find('ol');
                    $(this).find("SubInput").each(function () {
                        innerList.append("<li>" + $(this).text() + "</li>");
                    });
                    listCount++;
                });
-               $("#knowledge-list").find('li').css('background-color', 'white');
-               $(this).find("KnowledgeArea").each(function () {                   
-                   $("#knowledge-list").find('li:contains(' + $(this).text() + ')').css('background-color', 'red');
+               $("#knowledge-list").find('li').css('font-weight', 'normal').css('color', '#696969');
+               $(this).find("KnowledgeArea").each(function () {
+                   $("#knowledge-list").find('li:contains(' + $(this).text() + ')').css('font-weight', '700').css('color', '#000');
                });
            });
 
@@ -105,7 +105,7 @@
            $(xml).find("ProcessGroup[name='" + displayedGroup + "']").each(function () {
                listCount = 0;
                $(this).find("ProcessInput").each(function () {
-                   outerList.append("<li id=\"output-item-" + listCount + "\">" + $(this).find("Output").find("OutputName").text() + "</li>");
+                   outerList.append("<li id=\"output-item-" + listCount + "\"><ul><li>" + $(this).find("Output").find("OutputName").text() + "</li></ul></li>");
                    innerList = $("#output-item-" + listCount).append('<ol></ol>').find('ol');
                    $(this).find("SubOutput").each(function () {
                        innerList.append("<li>" + $(this).text() + "</li>");

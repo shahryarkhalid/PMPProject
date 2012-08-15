@@ -20,6 +20,15 @@ namespace PMP.Controllers
             }
             return View();
         }
+        
+        public ActionResult Print()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
+        }
 
     }
 }

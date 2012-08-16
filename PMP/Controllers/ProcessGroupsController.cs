@@ -27,6 +27,7 @@ namespace PMP.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
+            ViewBag.store = Request.QueryString["displayedGroup"];
             return View();
         }
 

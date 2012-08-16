@@ -23,24 +23,30 @@
        }
 
        var displayedGroup = "Initiating";
+       $('#displayedGroup').val(displayedGroup);
 
        function switchGroupName(direction) {
            if (direction == "right") {
                switch (displayedGroup) {
                    case "Initiating":
                        displayedGroup = "Planning";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Planning":
                        displayedGroup = "Executing";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Executing":
                        displayedGroup = "Monitoring and Controlling";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Monitoring and Controlling":
                        displayedGroup = "Closing";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Closing":
                        displayedGroup = "Initiating";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                }
            }
@@ -48,18 +54,23 @@
                switch (displayedGroup) {
                    case "Initiating":
                        displayedGroup = "Closing";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Planning":
                        displayedGroup = "Initiating";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Executing":
                        displayedGroup = "Planning";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Monitoring and Controlling":
                        displayedGroup = "Executing";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                    case "Closing":
                        displayedGroup = "Monitoring and Controlling";
+                       $('#displayedGroup').val(displayedGroup);
                        break;
                }
            }
@@ -182,8 +193,6 @@
 </div>
 <div class="clear"></div>
 
-@Html.ActionLink("Print", "Print", "ProcessGroups", new { processGroup = "Initiating" }, null)
-
 <div id="process">
     <div id="process-action">
         <div class='menu-header'>
@@ -205,6 +214,13 @@
     </div>
 </div>
 <div class="clear"></div>
+
+@using (Html.BeginForm("Print", "ProcessGroups", FormMethod.Get))
+{
+   @Html.Hidden("displayedGroup", "Initiating")
+
+   <input type="submit" value="Print" />
+}
 
 
     <script type="text/javascript">

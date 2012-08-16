@@ -3,7 +3,7 @@
     height: 280px;
 }
 
-#knowledge-area 
+#knowledge-area, #print-knowledge-area
 {
     float: left;
     border: 1px solid black;
@@ -17,6 +17,13 @@
     overflow: auto;  
     cursor: pointer;
     height: 256px;
+}
+
+#print-knowledge-area #print-knowledge-list
+{
+    line-height: 1.97em;   
+    cursor: pointer;
+    height: 100%;    
 }
 
 #main-scroller
@@ -36,6 +43,13 @@
     width: 898px;   
 }
 
+#print-process
+{
+    border: 1px solid black;
+    height: 100%;
+    width: 898px;     
+}
+
 #process-action
 {
     float: left;
@@ -52,6 +66,13 @@
     /*border: 1px solid black;*/
     width: 448px;
     height: inherit;
+}
+
+#print-process-deliverable
+{
+    float: left;
+    width: 448px;
+    height: inherit;   
 }
 
 .process-header-left
@@ -105,7 +126,7 @@
     font-weight: inherit;
 }
 
-#process-deliverable li
+#process-deliverable li, #print-process-deliverable li
 {
     margin-left: -20px;
     list-style: none;
@@ -113,13 +134,13 @@
     font-weight: 700;
 }
 
-#process-deliverable li ol
+#process-deliverable li ol, #print-process-deliverable li ol
 {
     margin-top: -22px;
     font-weight: normal;
 }
 
-#process-deliverable li ol li
+#process-deliverable li ol li, #print-process-deliverable li ol li
 {
     list-style-type: decimal; 
     margin-left: 50%;
@@ -132,6 +153,13 @@
     overflow: auto; 
     float: inherit;
     width: inherit;   
+}
+
+.print-process-content
+{
+    height: 100%;
+    float: inherit;
+    width: inherit;     
 }
 
 ol

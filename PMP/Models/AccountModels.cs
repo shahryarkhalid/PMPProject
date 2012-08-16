@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Web.Mvc;
 using System.Web.Security;
+using System.ComponentModel;
 
 namespace PMP.Models
 {
@@ -63,12 +64,17 @@ namespace PMP.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Mandatory(ErrorMessage = "You must agree to the Terms to register.")]
+        [Display(Name = "I have read and accept the EULA")]
+        public Boolean AcceptEula { get; set; }
     }
 
     public class ForgotPasswordModel
     {
         [Required]
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress, ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
 
     }

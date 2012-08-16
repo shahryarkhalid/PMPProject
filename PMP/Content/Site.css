@@ -325,3 +325,10 @@ div#title {
 .tri-state {
     width: 6em;
 }
+
+/* Styles for Register Page
+----------------------------------------------------------*/
+#eula-display{
+    width: 600px;
+    height: 200px;
+}

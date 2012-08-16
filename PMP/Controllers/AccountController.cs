@@ -67,6 +67,7 @@ namespace PMP.Controllers
 
         public ActionResult Register()
         {
+            ViewBag.eula = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lorem arcu, pulvinar non elementum eu, commodo vitae ipsum. Phasellus sodales, enim sed laoreet laoreet, mauris augue ultricies mauris, et dapibus lacus nisl nec libero. Sed semper, turpis sed pretium tempor, felis orci consequat turpis, ut dictum orci sapien non enim. Phasellus ultrices luctus faucibus. Morbi mattis nibh et nunc malesuada sit amet porta sem euismod. Etiam turpis risus, mattis eget ornare a, pulvinar sed ipsum. Nulla feugiat posuere molestie. Praesent sit amet urna neque. Quisque blandit iaculis sagittis.";
             return View();
         }
 
@@ -94,6 +95,7 @@ namespace PMP.Controllers
             }
 
             // If we got this far, something failed, redisplay form
+            ViewBag.eula = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lorem arcu, pulvinar non elementum eu, commodo vitae ipsum. Phasellus sodales, enim sed laoreet laoreet, mauris augue ultricies mauris, et dapibus lacus nisl nec libero. Sed semper, turpis sed pretium tempor, felis orci consequat turpis, ut dictum orci sapien non enim. Phasellus ultrices luctus faucibus. Morbi mattis nibh et nunc malesuada sit amet porta sem euismod. Etiam turpis risus, mattis eget ornare a, pulvinar sed ipsum. Nulla feugiat posuere molestie. Praesent sit amet urna neque. Quisque blandit iaculis sagittis.";
             return View(model);
         }
 
@@ -166,41 +168,44 @@ namespace PMP.Controllers
         {
             if (ModelState.IsValid)
             {
+                try
+                {
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("");
 
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                    string user = Membership.GetUserNameByEmail(model.Email);
+                    MembershipUser currentUser = Membership.GetUser(user);
+                    string password = currentUser.ResetPassword();
 
-                mail.From = new MailAddress(model.Email);
-                mail.To.Add("recepient@gmail.com");
-                mail.Subject = "Password recovery";
-                mail.Body = "Recovering the password";
+                    mail.From = new MailAddress("");
+                    mail.To.Add(new MailAddress(model.Email));
+                    mail.Subject = "Password Reset";
+                    mail.Body = "Your password has been reset to: " + password;
 
-                SmtpServer.Send(mail);
+                    SmtpServer.Send(mail);
+                }
+                catch (ArgumentNullException e)
+                {
+                    ModelState.AddModelError("", "The email was not found");
+                    return View(model);
+                }
+                catch (Exception e)
+                {
 
-                
-
-                //if (Membership.ValidateUser(model.UserName, model.Password))
-                //{
-                //    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                //    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                //        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                //    {
-                //        return Redirect(returnUrl);
-                //    }
-                //    else
-                //    {
-                //        return RedirectToAction("Index", "Home");
-                //    }
-                //}
-                //else
-                //{
-                //    ModelState.AddModelError("", "The user name or password provided is incorrect.");
-                //}
-            }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
+                }
+               
+            }            
+            return RedirectToAction("ResetPasswordSuccess");
         }
+
+        //
+        // GET: /Account/ResetPasswordSuccess
+
+        public ActionResult ResetPasswordSuccess()
+        {
+            return View();
+        }
+
 
         #region Status Codes
         private static string ErrorCodeToString(MembershipCreateStatus createStatus)

@@ -210,7 +210,8 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var carousel = $("#carousel").featureCarousel({
-                autoPlay: 0
+                autoPlay: 0,
+                trackerIndividual: false
                 // include options like this:
                 // (use quotes only for string values, and no trailing comma after last option)
                 // option: value,
@@ -233,19 +234,36 @@
             });
         });
 
-        $("#carousel-right").click(function () {
+        function switchRight() {
             switchGroupName("right");
             changeGroup();
+            $("#carousel-right").off('click');
+            setTimeout(function () {               
+                $("#carousel-right").click(function () {
+                    switchRight();
+                });
+
+            }, 1000);
+        }
+
+        function switchLeft() {
+            switchGroupName("left");
+            changeGroup();
+            $("#carousel-left").off('click');
+            setTimeout(function () {
+                $("#carousel-left").click(function () {
+                    switchLeft();
+                });
+
+            }, 1000);
+        }
+
+        $("#carousel-right").click(function () {
+            switchRight();
         });
 
         $("#carousel-left").click(function () {
-            switchGroupName("left");
-            changeGroup();
+            switchLeft();
         });
 
-        $("#tracker-2").click(function () {
-            alert('wee');
-            //switchGroupName("1");
-            //changeGroup();
-        });
     </script>

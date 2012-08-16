@@ -1,5 +1,251 @@
-﻿@{
+﻿<link href="@Url.Content("~/Content/ProcessGroups.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.jcoverflip.js")" type="text/javascript"></script>
+<script src="../../Scripts/jquery.featureCarousel.js" type="text/javascript"></script>
+<link href="../../Content/feature-carousel.css" rel="stylesheet" type="text/css" />
+@{
     ViewBag.Title = "Print";
+    ViewBag.OnLoad = "sendXMLRequest()";
+}
+@section HeaderJS{
+   <script type="text/javascript">
+       function sendXMLRequest() {
+           $(document).ready(function () {
+               $.ajax({
+                   type: "GET",
+                   url: "/Content/ProcessGroups.xml",
+                   dataType: "xml",
+                   success: handleResponse
+               });
+           });
+       }
+
+       function handleResponse(xml) {
+       }
+
+       var displayedGroup = "Initiating";
+
+       function switchGroupName(direction) {
+           if (direction == "right") {
+               switch (displayedGroup) {
+                   case "Initiating":
+                       displayedGroup = "Planning";
+                       break;
+                   case "Planning":
+                       displayedGroup = "Executing";
+                       break;
+                   case "Executing":
+                       displayedGroup = "Monitoring and Controlling";
+                       break;
+                   case "Monitoring and Controlling":
+                       displayedGroup = "Closing";
+                       break;
+                   case "Closing":
+                       displayedGroup = "Initiating";
+                       break;
+               }
+           }
+           else if (direction == "left") {
+               switch (displayedGroup) {
+                   case "Initiating":
+                       displayedGroup = "Closing";
+                       break;
+                   case "Planning":
+                       displayedGroup = "Initiating";
+                       break;
+                   case "Executing":
+                       displayedGroup = "Planning";
+                       break;
+                   case "Monitoring and Controlling":
+                       displayedGroup = "Executing";
+                       break;
+                   case "Closing":
+                       displayedGroup = "Monitoring and Controlling";
+                       break;
+               }
+           }
+           else if (direction == "1") {
+               displayedGroup = "Initiating";
+           }
+       }
+
+       function changeGroup() {
+           if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+               xmlhttp = new XMLHttpRequest();
+           }
+           else {// code for IE6, IE5
+               xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+           }
+           xmlhttp.open("GET", "/Content/ProcessGroups.xml", false);
+           xmlhttp.send();
+           xml = xmlhttp.responseXML;
+
+
+           $("#input-content").html("");
+           $("#output-content").html("");
+           var outerList = $("#input-content").append('<ul></ul>').find('ul');
+
+           $(xml).find("ProcessGroup[name='" + displayedGroup + "']").each(function () {
+               listCount = 0;
+               $(this).find("ProcessInput").each(function () {
+                   outerList.append("<li id=\"input-item-" + listCount + "\"><ul><li>" + $(this).find("InputName").text() + "</li></ul></li>");
+                   innerList = $("#input-item-" + listCount).append('<ol></ol>').find('ol');
+                   $(this).find("SubInput").each(function () {
+                       innerList.append("<li>" + $(this).text() + "</li>");
+                   });
+                   listCount++;
+               });
+               $("#knowledge-list").find('li').css('font-weight', 'normal').css('color', '#BBBBBB').css('border', 'none');
+               $(this).find("KnowledgeArea").each(function () {
+                   $("#knowledge-list").find('li:contains(' + $(this).text() + ')').css('font-weight', '800').css('color', '#000');
+               });
+           });
+
+           outerList = $("#output-content").append('<ul></ul>').find('ul');
+
+           $(xml).find("ProcessGroup[name='" + displayedGroup + "']").each(function () {
+               listCount = 0;
+               $(this).find("ProcessInput").each(function () {
+                   outerList.append("<li id=\"output-item-" + listCount + "\"><ul><li>" + $(this).find("Output").find("OutputName").text() + "</li></ul></li>");
+                   innerList = $("#output-item-" + listCount).append('<ol></ol>').find('ol');
+                   $(this).find("SubOutput").each(function () {
+                       innerList.append("<li>" + $(this).text() + "</li>");
+                   });
+                   listCount++;
+               });
+           });
+       }
+</script>
 }
 
-<h2>Print</h2>
+<div id="top-area">
+    <div id="knowledge-area">
+        <div class="menu-header">KNOWLEDGE AREA</div>
+        <div id="knowledge-list">
+            <ol>
+                <li><a>Integration</a></li>
+                <li><a>Scope</a></li>
+                <li><a>Time</a></li>
+                <li><a>Cost</a></li>
+                <li><a>Quality</a></li>
+                <li><a>Human Resource</a></li>
+                <li><a>Communications</a></li>
+                <li><a>Risk</a></li>
+                <li><a>Procurement</a></li>
+            </ol>
+        </div>
+    </div>
+    <div id="main-scroller">
+        <div class="carousel-container">
+    
+          <div id="carousel">
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/1.jpg"></a>
+              <div class="carousel-caption">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/2.jpg"></a>
+              <div class="carousel-caption">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/3.jpg"></a>
+              <div class="carousel-caption">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/4.jpg"></a>
+            </div>
+            <div class="carousel-feature">
+              <a href="#"><img class="carousel-image" alt="Image Caption" src="../../Content/img/5.jpg"></a>
+              <div class="carousel-caption">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu odio risus.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <div id="carousel-left"><img src="../../Content/img/arrow-left.png" /></div>
+          <div id="carousel-right"><img src="../../Content/img/arrow-right.png" /></div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+@Html.ActionLink("Print", "Print", "ProcessGroups")
+
+<div id="process">
+    <div id="process-action">
+        <div class='menu-header'>
+            <div class='process-header-left'>Process Input</div>
+            <div class='process-header-right'>Sub-Inputs</div>
+        </div>
+
+        <div class="process-content" id="input-content">
+        </div>
+    </div>
+    <div id="process-deliverable">
+        <div class='menu-header'>
+            <div class='process-header-left'>Process Output</div>
+            <div class='process-header-right'>Sub-Outputs</div>
+        </div>
+
+        <div class="process-content" id="output-content">
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var carousel = $("#carousel").featureCarousel({
+                autoPlay: 0
+                // include options like this:
+                // (use quotes only for string values, and no trailing comma after last option)
+                // option: value,
+                // option: value
+            });
+
+            changeGroup();
+
+            $("#but_prev").click(function () {
+                carousel.prev();
+            });
+            $("#but_pause").click(function () {
+                carousel.pause();
+            });
+            $("#but_start").click(function () {
+                carousel.start();
+            });
+            $("#but_next").click(function () {
+                carousel.next();
+            });
+        });
+
+        $("#carousel-right").click(function () {
+            switchGroupName("right");
+            changeGroup();
+        });
+
+        $("#carousel-left").click(function () {
+            switchGroupName("left");
+            changeGroup();
+        });
+
+        $("#tracker-2").click(function () {
+            alert('wee');
+            //switchGroupName("1");
+            //changeGroup();
+        });
+    </script>

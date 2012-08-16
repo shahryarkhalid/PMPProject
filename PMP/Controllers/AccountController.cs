@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
 using PMP.Models;
+using System.Net.Mail;
 
 namespace PMP.Controllers
 {
@@ -161,27 +162,40 @@ namespace PMP.Controllers
         // POST: /Account/ForgotPassword
 
         [HttpPost]
-        public ActionResult ForgotPassword(LogOnModel model, string returnUrl)
+        public ActionResult ForgotPassword(ForgotPasswordModel model, string returnUrl)
         {
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
-                {
-                    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
-                        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
-                    {
-                        return Redirect(returnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Home");
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError("", "The user name or password provided is incorrect.");
-                }
+
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress(model.Email);
+                mail.To.Add("recepient@gmail.com");
+                mail.Subject = "Password recovery";
+                mail.Body = "Recovering the password";
+
+                SmtpServer.Send(mail);
+
+                
+
+                //if (Membership.ValidateUser(model.UserName, model.Password))
+                //{
+                //    FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
+                //    if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
+                //        && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
+                //    {
+                //        return Redirect(returnUrl);
+                //    }
+                //    else
+                //    {
+                //        return RedirectToAction("Index", "Home");
+                //    }
+                //}
+                //else
+                //{
+                //    ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                //}
             }
 
             // If we got this far, something failed, redisplay form
